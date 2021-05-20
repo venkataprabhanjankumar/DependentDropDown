@@ -1,0 +1,42 @@
+.fieldd
+        {
+            width:300px;
+            height:28px;
+            background-color:#fffbfc;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px
+        }
+        .field
+        {
+            width:300px;
+            height:24px;
+            background-color:#fffbfc;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px
+        }
+        .fielddob
+        {
+            width:300px;
+            height:27px;
+            background-color:#fffbfc;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px
+        }
+        #log1
+        {
+            padding-left:350px;
+            padding-top:50px;
+            padding-right:350px;
+        }
+        #sub
+        {
+            width:200px;
+            height:30px;
+            background-color:#9f6cff;
+            border-style: ridge;
+            border-color:gray;
+            border-radius:6px;
+        }

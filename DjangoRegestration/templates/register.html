@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href={% static 'css/regestration.css' %}>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://yourjavascript.com/7174319415/script.js"></script>
+    <script type="text/javascript" src={% static 'js/state.js' %}> </script>
+    <script type="text/javascript" src={% static 'js/district.js' %}></script>
+    <script type="text/javascript" src={% static 'js/city.js' %}></script>
+</head>
+<body style="background-image: url({% static 'images/image.jpg' %});background-repeat:no-repeat;background-size:100%;">
+    <center>
+        <h1>Simple ERP</h1>
+        <div id="log1">
+        <div style="border:1px solid black;background-color:#8eb6e6">
+            <h1 style="font-size:20pt;font-family:cursive;">Regestration Form</h1><br/><br/>
+            {% if err_msg %}
+                <p style="color: red">{{ err_msg }}</p>
+            {% endif %}
+            <form  method="post" action="/welcome">
+                {% csrf_token %}
+                Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="name" placeholder="   Enter Name " class="field" required/> <br/><br/>
+                DataOfBirth &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" name="dob" placeholder="Enter Password" class="fielddob" required/>
+                <br/><br/>
+                Country  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="fieldd" name="country" id="country" required>
+                    <option value='Choose Country'>Choose Country</option>
+                    {% for cityval in details %}
+                        <option value="{{ cityval }}">{{ cityval }}</option>
+                    {% endfor %}
+                </select><br/><br/>
+                State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="fieldd" name="state" id="state" required>
+                </select><br/><br/>
+                 District &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select class="fieldd" name="district" id="district" required>
+
+                </select><br/><br/>
+                City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="city" id="city" class="fieldd" required>
+
+                </select><br/><br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit" id="sub">
+                <br/>
+            </form>
+            <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/display" style="text-decoration:none"> <span> List All The Users </span></a>
+            <br/><br/><br/>
+        </div></div>
+    </center>
+</body>
+
+</html>

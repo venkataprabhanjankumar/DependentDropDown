@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        #log1
+        {
+            padding-left:150px;
+            padding-top:50px;
+            padding-right:150px;
+        }
+    </style>
+</head>
+<body style="background-image: url({% static 'images/img.jpg' %});background-repeat:no-repeat;background-size:100%;">
+<br/><br/>
+    <div id="log1">
+        <div style="border:1px solid black;background-color:#566475">
+            <center>
+                <h1> Welcome   {{ name }}</h1>
+                <br/>
+                <table style="text-align: center;border-style: inset;height: 400px;width: 800px">
+                    <tr>
+                    <td>
+                        <b>Name</b>
+                    </td>
+                    <td>{{ name }}</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <b>DateOfBirth</b>
+                    </td>
+                    <td>{{ dob }}</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <b>Country</b>
+                    </td>
+                    <td>{{ country }}</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <b>State</b>
+                    </td>
+                    <td>{{ state }}</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <b>District</b>
+                    </td>
+                    <td>{{ district }}</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <b>City</b>
+                    </td>
+                    <td>{{ city }}</td>
+                    </tr>
+                </table>
+                <br/><br/><br/><br/><br/>
+            </center>
+        </div>
+        </div>
+</body>
+</html>
