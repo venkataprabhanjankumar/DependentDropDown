@@ -65,9 +65,9 @@ WSGI_APPLICATION = 'DjangoRegestration.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'mydb',
-        'USER':'root',
-        'PASSWORD':'prabhanjan7241',
+        'NAME':'name of database',
+        'USER':'username',
+        'PASSWORD':'password',
         'PORT': '3306',
     }
 }
